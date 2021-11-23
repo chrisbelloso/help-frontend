@@ -1,4 +1,4 @@
-const mainView = async () => {
+const MainView = async () => {
 
     return (
         <div>
@@ -7,4 +7,4 @@ const mainView = async () => {
     )
 }
 
-export default mainView;
+export default MainView;
