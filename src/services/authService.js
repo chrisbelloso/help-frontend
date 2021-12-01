@@ -5,7 +5,7 @@ const tokenString = "jwthelpapp";
 
 //POST/Login
 export const loginUserToApi = async (user) => {
-    const response = await axios.post(`${apiUrl}/auth/login`, user);
+    const response = await axios.post(`https://murmuring-journey-69933.herokuapp.com/api/v1/auth/login`, user);
     try {
         console.log(response.data);
         if (response.data) {
@@ -20,7 +20,7 @@ export const loginUserToApi = async (user) => {
 
 //POST/Signup
 export const signUpUser = async (user) => {
-    const response = await axios.post(`${apiUrl}/auth/signup`, user);
+    const response = await axios.post(`https://murmuring-journey-69933.herokuapp.com/api/v1/auth/signup`, user);
     try {
         alert('User Created')
         return response;
