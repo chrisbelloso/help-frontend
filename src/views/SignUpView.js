@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { signUpUser } from "../services/authService";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import './auth.css'
 
@@ -11,6 +12,7 @@ const signUpView = () => {
         email: "",
         password: ""
     })
+    const navigate = useNavigate();
 
     const handleChange = (event) => {
         setUser({
@@ -21,7 +23,8 @@ const signUpView = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        signUpUser(user);
+        await signUpUser(user);
+        navigate("/");
         setUser({
             name: "",
             lastName: "",

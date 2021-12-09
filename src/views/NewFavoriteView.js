@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
 import { createContact } from "../services/contactService";
 import "./form.css";
@@ -13,6 +13,7 @@ const AddFavoriteView = () => {
     phoneNumber: "",
   });
   const { id } = useParams();
+  const navigate = useNavigate();
 
   // HandleChange
   const handleChange = (event) => {
@@ -27,6 +28,7 @@ const AddFavoriteView = () => {
     event.preventDefault();
     console.log(contact);
     await createContact(contact);
+    navigate("/favorites");
   };
 
   // createContact(contact)
@@ -38,8 +40,6 @@ const AddFavoriteView = () => {
           <div className="col">
             <form className="form">
               <h2>ADD FAVORITE CONTACT</h2>
-              <label >Name</label>
-              <br />
               <input
                 name="name"
                 value={contact.name}
@@ -47,7 +47,6 @@ const AddFavoriteView = () => {
                 placeholder="name"
                 type="text"
               />
-              <label>Phone Number</label>
               <input 
                 type="number"
                 placeholder="number" 
@@ -56,7 +55,9 @@ const AddFavoriteView = () => {
                 value={contact.phoneNumber}
               />
               <br />
-              <button onClick={handleSumbit} className="addingButton">
+              <button 
+              onClick={handleSumbit} 
+              className="addingButton">
                 Add
               </button>
             </form>
