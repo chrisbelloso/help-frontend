@@ -17,7 +17,7 @@ const NavBar = () => {
           <Nav className="me-auto links">
             <Link to="/">Home</Link>
             <Link to="/Favorites">Favorites</Link>
-            <button onClick={logOut} className="logOutBtn">Sign Out :(</button>
+            <button onClick={logOut} className="logOutBtn">Sign Out</button>
           </Nav>
         </Navbar.Collapse>
     </Navbar>

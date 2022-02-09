@@ -2,7 +2,7 @@
   border: solid 1px lightgrey;
   box-shadow: 0px 10px 10px lightgray;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 20px 45px 20px 45px;
   max-width: 400px;
   margin: 40px auto;
 }
@@ -25,4 +25,5 @@
   border-color: black;
   border-width: 2px;
   box-shadow: 0px 10px 10px lightgray;
+  margin-bottom: 10px;
 }
