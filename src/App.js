@@ -9,6 +9,7 @@ import SignUpView from './views/SignUpView';
 import { isAuthenticated } from './services/authService';
 import LoginView from './views/LoginView';
 import AuthRoute from './components/AuthRoute';
+import AboutView from './views/AboutView';
 
 function App() {
   
@@ -23,6 +24,7 @@ function App() {
         <Route element={<AuthRoute/>}> 
           <Route path="/favorites" element={<FavoritesView/>}/>
           <Route path="/addFavorite" element={<NewFavoriteView/>}/>
+          <Route path="/about" element={<AboutView/>}/>
           <Route path="/" element={<MainView/>}/>
         </Route>
       </Routes>

@@ -27,6 +27,7 @@ const FavoritesView = () => {
             marginTop: "25px",
             marginBottom: "5px",
             textAlign: "center",
+            fontWeight: "bold"
           }}
         >
           FAVORITES

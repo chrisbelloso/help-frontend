@@ -8,7 +8,7 @@ const MainView = () => {
     return (
         <>
         <div style={{textAlign: "center"}}>
-                <a className="rounded-button" href="tel:+17866038365">CRASHED</a>
+                <a className="rounded-button" href="tel:911">CRASHED</a>
         </div>
 
         <div style={{textAlign: "center"}}>
